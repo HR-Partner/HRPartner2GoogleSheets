@@ -103,7 +103,12 @@ function ImportHRPartner(object, fields, parseOptions) {
  **/
 
 function DateHRPartner(datestring) {
-  return new Date(datestring);
+  var d = new Date(datestring);
+  if (d == "Invalid Date") {
+    return "";
+  } else {
+    return d;
+  }
 }
 
 
